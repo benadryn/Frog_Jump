@@ -5,20 +5,17 @@ using UnityEngine;
 public class PlayerJump : MonoBehaviour
 {
     private Rigidbody _rb;
-    private float _heldTime = 5.0f;
     private bool _isGrounded;
+    private float _heldTime;
 
-    public float maxHoldTime = 10.0f;
-
+    public float startHoldTime;
+    public float maxHoldTime = 15.0f;
     
-    
-    // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
+        _heldTime = startHoldTime;
     }
-
-    // Update is called once per frame
     void Update()
     {
         Jump();
@@ -47,7 +44,7 @@ public class PlayerJump : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space) && _isGrounded)
         {
             _rb.AddRelativeForce(new Vector3(0, 1.0f, 1.0f) * _heldTime, ForceMode.Impulse);
-            _heldTime = 5;
+            _heldTime = startHoldTime;
             _isGrounded = false;
         }
     }
