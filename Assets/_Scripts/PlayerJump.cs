@@ -5,6 +5,7 @@ public class PlayerJump : MonoBehaviour
     private Rigidbody _rb;
     private bool _isGrounded;
     private float _heldTime;
+    [SerializeField] private float jumpSpeedMultiplier = 1.2f;
 
     public float startHoldTime;
     public float maxHoldTime = 15.0f;
@@ -32,7 +33,7 @@ public class PlayerJump : MonoBehaviour
         // get hold time when pressing down
         if (Input.GetKey(KeyCode.Space) && _isGrounded)
         {
-            _heldTime += Time.deltaTime;
+            _heldTime += Time.deltaTime * jumpSpeedMultiplier;
             if (_heldTime > maxHoldTime)
             {
                 _heldTime = maxHoldTime;

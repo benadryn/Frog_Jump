@@ -1,26 +1,37 @@
+using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Score : MonoBehaviour
 {
-    public TMP_Text scoreText ;
+    public static Score Instance;
+    
+    private static int _score = 0;
+    [SerializeField]private TMP_Text scoreText;
+
+    
     private void Awake()
     {
-        scoreText.text = "Score: " + GameManager.AddScore(0);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
+        if (Instance != null && Instance != this)
         {
-            AddScore();
             Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
         }
     }
 
-    void AddScore()
+    private void Start()
     {
-        scoreText.text = "Score: " + GameManager.AddScore(1);
-        
+        AddScore(0);
+
+    }
+
+    public void AddScore(int point)
+    {
+        _score += point;
+        scoreText.text = "Score: " + _score;
     }
 }

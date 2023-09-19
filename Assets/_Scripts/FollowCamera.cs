@@ -7,10 +7,14 @@ public class FollowCamera : MonoBehaviour
     public Transform player;
     public float followSpeed = 5.0f;
     public float minZPosition = 0.0f;
-    public float yOffset = 2.0f;
+    [SerializeField]private float yOffset = 2.0f;
+    [SerializeField] private float zOffset = 1.0f;
     public float waitSeconds = 1.0f;
 
+    [SerializeField] private float lerpBackDuration = 1.0f;
+
     private Vector3 _camStartPos;
+    private bool _deathCoroutineRunning;
     private bool _shouldFollow = false;
 
     private void Start()
@@ -34,8 +38,9 @@ public class FollowCamera : MonoBehaviour
             FollowPlayer();
         }
 
-        if (OnDeath.IsDead == true)
+        if (OnDeath.IsDead == true && !_deathCoroutineRunning)
         {
+            _deathCoroutineRunning = true;
             StartCoroutine(nameof(ResetCam), waitSeconds);
             // ResetCam(waitSeconds);
         }
@@ -45,7 +50,7 @@ public class FollowCamera : MonoBehaviour
 
     private void FollowPlayer()
     {
-        float newZ = Mathf.Lerp(transform.position.z, player.position.z, followSpeed * Time.deltaTime);
+        float newZ = Mathf.Lerp(transform.position.z, player.position.z + zOffset, followSpeed * Time.deltaTime);
         float newY = Mathf.Lerp(transform.position.y, player.position.y + yOffset, followSpeed * Time.deltaTime);
         Vector3 newPosition = new Vector3(transform.position.x, newY, newZ);
         transform.position = newPosition;
@@ -53,9 +58,15 @@ public class FollowCamera : MonoBehaviour
 
     private IEnumerator ResetCam(float waitTime)
     {
+        Vector3 lerpStartPos = transform.position;
         yield return new WaitForSeconds(waitTime);
-        transform.position = Vector3.Lerp(transform.position, _camStartPos, followSpeed * Time.deltaTime);
+        for (float lerpTime = 0; lerpTime < lerpBackDuration; lerpTime += Time.deltaTime)
+        {
+            transform.position = Vector3.Lerp(lerpStartPos, _camStartPos, lerpTime/lerpBackDuration);
+            yield return null;
+        }
         OnDeath.IsDead = false;
+        _deathCoroutineRunning = false;
     }
     // private async void ResetCam(float waitTime)
     // {

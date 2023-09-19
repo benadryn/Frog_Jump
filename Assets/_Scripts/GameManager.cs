@@ -4,12 +4,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    private static int Score = 0;
-
     public GameState state;
-
     public bool died = false;
-
     public static event Action<GameState> OnGameStateChange;
 
     private void Awake()
@@ -44,11 +40,5 @@ public class GameManager : MonoBehaviour
     {
         Alive,
         Dead
-    }
-
-    public static int AddScore(int score)
-    {
-        return Score += score;
-        
     }
 }

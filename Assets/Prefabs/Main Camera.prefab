@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5869212839175340705}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.47180325, y: -0, z: -0, w: -0.8817039}
+  m_LocalRotation: {x: -0.47180468, y: 0, z: -0, w: -0.88170314}
   m_LocalPosition: {x: 0, y: 12.35, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -108,4 +108,7 @@ MonoBehaviour:
   player: {fileID: 0}
   followSpeed: 5
   minZPosition: 5
-  yOffset: 2
+  yOffset: 3
+  zOffset: -2
+  waitSeconds: 1
+  lerpBackDuration: 1
