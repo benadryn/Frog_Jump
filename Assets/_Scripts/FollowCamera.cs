@@ -1,7 +1,9 @@
 using System;
+using System.Threading.Tasks;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 
 public class FollowCamera : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class FollowCamera : MonoBehaviour
     public float followSpeed = 5.0f;
     public float minZPosition = 0.0f;
     public float yOffset = 2.0f;
+    public float waitSeconds = 1.0f;
 
     private Vector3 _camStartPos;
     private bool _shouldFollow = false;
@@ -36,7 +39,8 @@ public class FollowCamera : MonoBehaviour
 
         if (OnDeath.IsDead == true)
         {
-            StartCoroutine(nameof(ResetCam), 1.0f);
+            StartCoroutine(nameof(ResetCam), waitSeconds);
+            // ResetCam(waitSeconds);
         }
         
         
@@ -56,4 +60,11 @@ public class FollowCamera : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, _camStartPos, followSpeed * Time.deltaTime);
         OnDeath.IsDead = false;
     }
+    // private async void ResetCam(float waitTime)
+    // {
+    //     await Awaitable.WaitForSecondsAsync(waitTime);
+    //     transform.position = Vector3.Lerp(transform.position, _camStartPos, followSpeed * Time.deltaTime);
+    //     OnDeath.IsDead = false;
+    // }
 }
+

@@ -45,4 +45,10 @@ public class GameManager : MonoBehaviour
         Alive,
         Dead
     }
+
+    public static int AddScore(int score)
+    {
+        return Score += score;
+        
+    }
 }

@@ -7,11 +7,9 @@ using UnityEngine;
 public class Score : MonoBehaviour
 {
     public TMP_Text scoreText ;
-    private int _score;
-    private void Start()
+    private void Awake()
     {
-        _score = GameManager.Score;
-
+        scoreText.text = "Score: " + GameManager.AddScore(0);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -25,8 +23,7 @@ public class Score : MonoBehaviour
 
     void AddScore()
     {
-        _score += 1;
-        scoreText.text += _score;
+        scoreText.text = "Score: " + GameManager.AddScore(1);
         
     }
 }
