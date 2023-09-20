@@ -5,13 +5,17 @@ public class PlayerJump : MonoBehaviour
     private Rigidbody _rb;
     private bool _isGrounded;
     private float _heldTime;
+    private Animator _animator;
     [SerializeField] private float jumpSpeedMultiplier = 1.2f;
+    [SerializeField] private GameObject arrow;
+    
 
     public float startHoldTime;
     public float maxHoldTime = 15.0f;
     
     void Start()
     {
+        _animator = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody>();
         _heldTime = startHoldTime;
     }
@@ -25,6 +29,8 @@ public class PlayerJump : MonoBehaviour
         if (other.gameObject.CompareTag("Platform"))
         {
             _isGrounded = true;
+            StartJumpSequence(false, true);
+
         }
     }
 
@@ -42,9 +48,17 @@ public class PlayerJump : MonoBehaviour
         // grab hold time and add force to jump
         if (Input.GetKeyUp(KeyCode.Space) && _isGrounded)
         {
+            StartJumpSequence(true, false);
             _rb.AddRelativeForce(new Vector3(0, 1.0f, 1.0f) * _heldTime, ForceMode.Impulse);
             _heldTime = startHoldTime;
             _isGrounded = false;
         }
+    }
+
+    private void StartJumpSequence(bool isJumping, bool isIdle)
+    {
+        _animator.SetBool("isJumping", isJumping);
+        _animator.SetBool("isIdle", isIdle);
+        arrow.gameObject.SetActive(isIdle);
     }
 }
