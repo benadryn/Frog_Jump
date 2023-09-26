@@ -290,6 +290,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6768761911510260574}
   - component: {fileID: -2592072037050777800}
+  - component: {fileID: -3142046891070845031}
   m_Layer: 0
   m_Name: Slime_Sprout
   m_TagString: Untagged
@@ -336,6 +337,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-3142046891070845031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8480220764166746011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 210c2907ed5787d439d8ac320d7580c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4127679415442381038
 PrefabInstance:
   m_ObjectHideFlags: 0

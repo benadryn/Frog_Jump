@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f535959d516026489f50e4cf4d2ed68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPower: 15
+  maxPower: 10
   minPower: 5
   currentPower: 0
   jumpSlider: {fileID: 6634165982073330766}
@@ -539,8 +539,8 @@ MonoBehaviour:
   m_HandleRect: {fileID: 3877656919671019706}
   m_Direction: 0
   m_MinValue: 5
-  m_MaxValue: 15
-  m_WholeNumbers: 0
+  m_MaxValue: 10
+  m_WholeNumbers: 1
   m_Value: 5
   m_OnValueChanged:
     m_PersistentCalls:

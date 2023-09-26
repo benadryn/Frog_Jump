@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   died: 0
+  isGrounded: 0
 --- !u!114 &4824263213640723162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,4 +67,5 @@ MonoBehaviour:
   - {fileID: 6474108061497143520, guid: a1884974b34fe3d488bcf692e08013bb, type: 3}
   - {fileID: 5781807310587242830, guid: 585f73e01a59aad429c6301e705240e0, type: 3}
   - {fileID: 8480220764166746011, guid: 261f70649d485224c84e77fa5b287347, type: 3}
+  - {fileID: 3597194521557683984, guid: 367dd7edcbc828f4eab62ac8e1da9902, type: 3}
   parentObj: {fileID: 0}

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8218811614711219261}
   - component: {fileID: 7173548866513347925}
+  - component: {fileID: 2217226118339627321}
   m_Layer: 0
   m_Name: Slime_Leaf
   m_TagString: Untagged
@@ -55,6 +56,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2217226118339627321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843605296171022510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 210c2907ed5787d439d8ac320d7580c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3300852001498919346
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,8 +12,8 @@ public class LevelManager : MonoBehaviour
     public static LevelManager Instance;
     [SerializeField] private GameObject loadingScreen;
     [SerializeField] private GameObject mainMenu;
-    [SerializeField] private Slider loadingSlider;
-
+    [SerializeField] private Image loadingSlider;
+    
     private float _target;
     
 
@@ -31,9 +32,9 @@ public class LevelManager : MonoBehaviour
 
     public async void LoadScene(string sceneName)
     {
-        _target = 0;
-        loadingSlider.value = 0;
-        mainMenu.SetActive(false);
+        loadingSlider.fillAmount = 0;
+        
+        mainMenu.SetActive(false); 
         loadingScreen.SetActive(true);
         AsyncOperation scene = SceneManager.LoadSceneAsync(sceneName);
         scene.allowSceneActivation = false;
@@ -50,11 +51,16 @@ public class LevelManager : MonoBehaviour
         // Artificial loading
         await Task.Delay(1000);
         scene.allowSceneActivation = true;
+        if(sceneName == "StartMenu") mainMenu.SetActive(true);
         loadingScreen.SetActive(false);
-        }
+        _target = 0;
+    }
 
     private void Update()
     {
-        loadingSlider.value = Mathf.MoveTowards(loadingSlider.value, _target, 3 * Time.deltaTime);
+        if (_target > 0)
+        {
+            loadingSlider.fillAmount = Mathf.MoveTowards(loadingSlider.fillAmount, _target, 3 * Time.deltaTime);
+        }
     }
 }

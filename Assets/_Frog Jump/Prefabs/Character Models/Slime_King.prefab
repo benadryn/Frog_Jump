@@ -137,6 +137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5382640904966920009}
   - component: {fileID: 2668167069457330849}
+  - component: {fileID: -3391641941563840698}
   m_Layer: 0
   m_Name: Slime_King
   m_TagString: Untagged
@@ -183,6 +184,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-3391641941563840698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5781807310587242830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 210c2907ed5787d439d8ac320d7580c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7681484820293724762
 GameObject:
   m_ObjectHideFlags: 0

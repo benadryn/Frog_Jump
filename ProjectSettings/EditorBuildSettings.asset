@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/_Frog Jump/Scenes/StartMenu.unity
     guid: 13c86159a7d89d64db6d66f650d686fd
   - enabled: 1
+    path: Assets/_Frog Jump/Scenes/Character Select.unity
+    guid: 29bc113e836ba434b90fe182aabf24d6
+  - enabled: 1
     path: Assets/_Frog Jump/Scenes/Level 1.unity
     guid: 8b218c10e98fad243a3db3ff5683b145
   m_configObjects: {}

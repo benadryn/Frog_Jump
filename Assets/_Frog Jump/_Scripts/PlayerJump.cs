@@ -3,33 +3,35 @@ using UnityEngine;
 public class PlayerJump : MonoBehaviour
 {
     private Rigidbody _rb;
-    private bool _isGrounded;
+    // private bool _isGrounded;
     private float _heldTime;
-    private Animator _animator;
+    // private Animator _animator;
     [SerializeField] private float jumpSpeedMultiplier = 1.2f;
     [SerializeField] private GameObject arrow;
-    
+    private bool _isGrounded;
 
     public float startHoldTime;
     public float maxHoldTime = 15.0f;
     
     void Start()
     {
-        _animator = GetComponent<Animator>();
+        // _animator = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody>();
         _heldTime = startHoldTime;
     }
     void Update()
     {
         Jump();
+        _isGrounded = GameManager.Instance.isGrounded;
 
     }
 
     private void OnCollisionEnter(Collision other) {
         if (other.gameObject.CompareTag("Platform"))
         {
-            _isGrounded = true;
-            StartJumpSequence(false, true);
+            GameManager.Instance.isGrounded = true;
+            // StartJumpSequence(false, true);
+            arrow.gameObject.SetActive(true);
 
         }
     }
@@ -48,18 +50,21 @@ public class PlayerJump : MonoBehaviour
         // grab hold time and add force to jump
         if (Input.GetKeyUp(KeyCode.Space) && _isGrounded)
         {
-            StartJumpSequence(true, false);
+            // StartJumpSequence(true, false);
             _rb.AddRelativeForce(new Vector3(0, 1.0f, 1.0f) * _heldTime, ForceMode.Impulse);
             _heldTime = startHoldTime;
-            _isGrounded = false;
+            GameManager.Instance.isGrounded = false;
+            arrow.gameObject.SetActive(false);
+
+
         }
     }
 
     // Set bools for jump animation and hide direction arrow
-    private void StartJumpSequence(bool isJumping, bool isIdle)
-    {
-        _animator.SetBool("isJumping", isJumping);
-        _animator.SetBool("isIdle", isIdle);
-        arrow.gameObject.SetActive(isIdle);
-    }
+    // private void StartJumpSequence(bool isJumping, bool isIdle)
+    // {
+    //     _animator.SetBool("isJumping", isJumping);
+    //     _animator.SetBool("isIdle", isIdle);
+    //     arrow.gameObject.SetActive(isIdle);
+    // }
 }

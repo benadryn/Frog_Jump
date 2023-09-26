@@ -9,11 +9,10 @@ public class LoadCharacter : MonoBehaviour
     [SerializeField] private GameObject[] characterPrefabs;
     [SerializeField] private GameObject parentObj;
     
-    void Start()
+    void Awake()
     {
         int selectedCharacter = PlayerPrefs.GetInt("selectedCharacter");
         GameObject prefab = characterPrefabs[selectedCharacter];
         Instantiate(prefab, parentObj.transform);
-        Animator anim = parentObj.GetComponent<Animator>();
     }
 }

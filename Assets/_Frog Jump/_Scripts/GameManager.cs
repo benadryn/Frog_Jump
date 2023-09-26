@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public GameState state;
     public bool died = false;
+    public bool isGrounded;
     public static event Action<GameState> OnGameStateChange;
 
     private void Awake()
