@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -7,6 +9,7 @@ public class GameManager : MonoBehaviour
     public GameState state;
     public bool died = false;
     public bool isGrounded;
+    public bool didFinish = false;
     public static event Action<GameState> OnGameStateChange;
 
     private void Awake()
@@ -49,4 +52,5 @@ public class GameManager : MonoBehaviour
         Alive,
         Dead
     }
+    
 }

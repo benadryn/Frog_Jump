@@ -21,7 +21,10 @@ public class PlayerJump : MonoBehaviour
     }
     void Update()
     {
-        Jump();
+        if (!GameManager.Instance.didFinish)
+        {
+            Jump();
+        }
         _isGrounded = GameManager.Instance.isGrounded;
 
     }
@@ -51,7 +54,7 @@ public class PlayerJump : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space) && _isGrounded)
         {
             // StartJumpSequence(true, false);
-            _rb.AddRelativeForce(new Vector3(0, 1.0f, 1.0f) * _heldTime, ForceMode.Impulse);
+            _rb.AddRelativeForce(new Vector3(0, 1.0f, 1.0f) * Mathf.Round(_heldTime), ForceMode.Impulse);
             _heldTime = startHoldTime;
             GameManager.Instance.isGrounded = false;
             arrow.gameObject.SetActive(false);

@@ -20,7 +20,7 @@ public class JumpPowerSlider : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && GameManager.Instance.isGrounded && !GameManager.Instance.didFinish)
         {
             if (currentPower <= maxPower)
             {

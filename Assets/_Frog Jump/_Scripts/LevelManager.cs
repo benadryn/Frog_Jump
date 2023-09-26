@@ -56,6 +56,11 @@ public class LevelManager : MonoBehaviour
         _target = 0;
     }
 
+    public void LoadLevel(int level)
+    {
+        SceneManager.LoadScene(level);
+    }
+
     private void Update()
     {
         if (_target > 0)
