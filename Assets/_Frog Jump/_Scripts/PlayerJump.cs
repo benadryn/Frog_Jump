@@ -54,6 +54,8 @@ public class PlayerJump : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space) && _isGrounded)
         {
             // StartJumpSequence(true, false);
+            // turn off for moving platforms
+            _rb.constraints &= ~RigidbodyConstraints.FreezePositionX;
             _rb.AddRelativeForce(new Vector3(0, 1.0f, 1.0f) * Mathf.Round(_heldTime), ForceMode.Impulse);
             _heldTime = startHoldTime;
             GameManager.Instance.isGrounded = false;

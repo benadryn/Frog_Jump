@@ -34,5 +34,6 @@ public class CharacterSelection : MonoBehaviour
     public void MainMenu()
     {
         PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
+        LevelManager.Instance.LoadScene("StartMenu");
     }
 }
