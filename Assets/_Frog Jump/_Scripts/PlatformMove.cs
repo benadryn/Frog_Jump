@@ -26,11 +26,11 @@ public class PlatformMove : MonoBehaviour
     {
         // Doesn't work for certain speeds need to fix
         Vector3 currentPos = transform.position;
-        if (currentPos == _startPos)
+        if (Mathf.Ceil(currentPos.x) == Mathf.Ceil(_startPos.x))
         {
             _targetPos = _endPos;
         }
-        else if (currentPos.x <= _endPos.x)
+        else if (Mathf.Round(currentPos.x) <= Mathf.Round(_endPos.x))
         {
             _targetPos = _startPos;
         }

@@ -52,6 +52,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpSpeedMultiplier: 2
   arrow: {fileID: 6328041247628124670}
+  _audioSource: {fileID: 0}
+  _jumpSFX: {fileID: 8300000, guid: d4a8bdeba03a138489eb517d0053b5fc, type: 3}
   startHoldTime: 5
   maxHoldTime: 10
 --- !u!114 &2940837099000750962
@@ -83,6 +85,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPos: {fileID: 0}
   resetYPos: -3
+  _src: {fileID: 0}
+  _splashSFX: {fileID: 8300000, guid: 8a17636c9ad37cf4ebb1a0ac14dcc7de, type: 3}
 --- !u!54 &1085060112883432332
 Rigidbody:
   m_ObjectHideFlags: 0

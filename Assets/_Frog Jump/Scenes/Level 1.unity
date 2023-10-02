@@ -180,11 +180,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 858be625284921445803eee81a80f536, type: 3}
---- !u!4 &120015911 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5252574907196359039, guid: bd9fcc30fb88d064193c3e83be2cc464, type: 3}
-  m_PrefabInstance: {fileID: 496135340}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &375943781
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,6 +476,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 734a470dc5f8d924f9d8a548f047a2a6, type: 3}
+--- !u!4 &716755742 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1202295216010141521, guid: bd9fcc30fb88d064193c3e83be2cc464, type: 3}
+  m_PrefabInstance: {fileID: 496135340}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &892627782 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8431953910878930255, guid: 87976b14ab33f774b8dc16c3cb0ccc13, type: 3}
+  m_PrefabInstance: {fileID: 1473858601}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &966008195 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2739308303073180461, guid: f5623b5c1a0aaae4f9380d8f478e6135, type: 3}
@@ -834,9 +839,17 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6346734534834798940, guid: f5623b5c1a0aaae4f9380d8f478e6135, type: 3}
+      propertyPath: _src
+      value: 
+      objectReference: {fileID: 892627782}
+    - target: {fileID: 6346734534834798940, guid: f5623b5c1a0aaae4f9380d8f478e6135, type: 3}
       propertyPath: startPos
       value: 
-      objectReference: {fileID: 120015911}
+      objectReference: {fileID: 716755742}
+    - target: {fileID: 8048631956958765015, guid: f5623b5c1a0aaae4f9380d8f478e6135, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 892627782}
     - target: {fileID: 9212317413106472021, guid: f5623b5c1a0aaae4f9380d8f478e6135, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.162
@@ -890,6 +903,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2122534822984419670, guid: df7774d7392676649a260baa41bff9b6, type: 3}
+      propertyPath: _src
+      value: 
+      objectReference: {fileID: 892627782}
     - target: {fileID: 5641709350552497183, guid: df7774d7392676649a260baa41bff9b6, type: 3}
       propertyPath: m_Name
       value: Coin

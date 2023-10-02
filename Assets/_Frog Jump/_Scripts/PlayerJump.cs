@@ -8,6 +8,8 @@ public class PlayerJump : MonoBehaviour
     // private Animator _animator;
     [SerializeField] private float jumpSpeedMultiplier = 1.2f;
     [SerializeField] private GameObject arrow;
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip _jumpSFX;
     private bool _isGrounded;
 
     public float startHoldTime;
@@ -53,6 +55,7 @@ public class PlayerJump : MonoBehaviour
         // grab hold time and add force to jump
         if (Input.GetKeyUp(KeyCode.Space) && _isGrounded)
         {
+            _audioSource.PlayOneShot(_jumpSFX);
             // StartJumpSequence(true, false);
             // turn off for moving platforms
             _rb.constraints &= ~RigidbodyConstraints.FreezePositionX;

@@ -118,4 +118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54cfb82590809de4e95dfd15fff5fcff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _src: {fileID: 0}
+  _scoreSFX: {fileID: 8300000, guid: bde884bb37f68294b91ff884badfdb2e, type: 3}
   point: 1
