@@ -20,7 +20,7 @@ public class NextLevel : MonoBehaviour
         {
             if (_scene.buildIndex < SceneManager.sceneCountInBuildSettings - 1)
             {
-                int randomParticle = Random.Range(0, endLevel.Length - 1);
+                int randomParticle = Random.Range(0, endLevel.Length);
                 Debug.Log(randomParticle);
                 endLevel[randomParticle].Play();
                 StartCoroutine(nameof(LoadLevel));

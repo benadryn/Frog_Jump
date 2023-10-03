@@ -147,11 +147,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endLevel:
+  - {fileID: 6236125230171765971}
   - {fileID: 9161763001194271574}
   - {fileID: 8219878599243967194}
   - {fileID: 5849512656581268623}
   - {fileID: 697261612728253394}
-  - {fileID: 6236125230171765971}
   secondsNewLevel: 2
 --- !u!1 &6457551261076313671
 GameObject:
