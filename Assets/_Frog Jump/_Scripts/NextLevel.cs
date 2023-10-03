@@ -1,10 +1,12 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class NextLevel : MonoBehaviour
 {
+    [SerializeField] private ParticleSystem[] endLevel;
+    [SerializeField] private int secondsNewLevel = 2;
     private Scene _scene;
     private void Start()
     {
@@ -18,6 +20,9 @@ public class NextLevel : MonoBehaviour
         {
             if (_scene.buildIndex < SceneManager.sceneCountInBuildSettings - 1)
             {
+                int randomParticle = Random.Range(0, endLevel.Length - 1);
+                Debug.Log(randomParticle);
+                endLevel[randomParticle].Play();
                 StartCoroutine(nameof(LoadLevel));
                 GameManager.Instance.didFinish = true;
             }
@@ -32,7 +37,7 @@ public class NextLevel : MonoBehaviour
 
     private IEnumerator LoadLevel()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(secondsNewLevel);
         LevelManager.Instance.LoadLevel(_scene.buildIndex + 1);
     }
 }

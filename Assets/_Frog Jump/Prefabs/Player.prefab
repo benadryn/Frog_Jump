@@ -85,8 +85,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPos: {fileID: 0}
   resetYPos: -3
-  _src: {fileID: 0}
-  _splashSFX: {fileID: 8300000, guid: 8a17636c9ad37cf4ebb1a0ac14dcc7de, type: 3}
+  src: {fileID: 0}
+  splashSfx: {fileID: 8300000, guid: 8a17636c9ad37cf4ebb1a0ac14dcc7de, type: 3}
+  splashParticle: {fileID: 8205706795460263316, guid: 326e86d5729c54e479798cacab220bb2, type: 3}
 --- !u!54 &1085060112883432332
 Rigidbody:
   m_ObjectHideFlags: 0

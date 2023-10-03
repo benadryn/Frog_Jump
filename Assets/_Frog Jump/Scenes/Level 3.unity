@@ -524,6 +524,11 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 8431953910878930255, guid: 87976b14ab33f774b8dc16c3cb0ccc13, type: 3}
   m_PrefabInstance: {fileID: 1036828191}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1036828193 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2301446567355980332, guid: 87976b14ab33f774b8dc16c3cb0ccc13, type: 3}
+  m_PrefabInstance: {fileID: 1036828191}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1090877730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -822,6 +827,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6346734534834798940, guid: f5623b5c1a0aaae4f9380d8f478e6135, type: 3}
+      propertyPath: src
+      value: 
+      objectReference: {fileID: 1036828193}
     - target: {fileID: 6346734534834798940, guid: f5623b5c1a0aaae4f9380d8f478e6135, type: 3}
       propertyPath: _src
       value: 

@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class OnDeath : MonoBehaviour
@@ -12,10 +12,11 @@ public class OnDeath : MonoBehaviour
 
     public static OnDeath Instance;
 
-    private float _deathSoundPos = -1.5f;
+    private float _deathSoundPos = -2.0f;
     private bool _soundPlaying;
-    [SerializeField] private AudioSource _src;
-    [SerializeField] private AudioClip _splashSFX;
+    [SerializeField] private AudioSource src;
+    [SerializeField] private AudioClip splashSfx;
+    [SerializeField] private ParticleSystem splashParticle;
 
     private void Awake()
     {
@@ -26,7 +27,9 @@ public class OnDeath : MonoBehaviour
     {
         if (transform.position.y < _deathSoundPos && !_soundPlaying)
         {
-            _src.PlayOneShot(_splashSFX);
+            Vector3 currentPos = gameObject.transform.position;
+            Instantiate(splashParticle, currentPos, quaternion.identity);
+            src.PlayOneShot(splashSfx);
             _soundPlaying = true;
         }
         if (transform.position.y < resetYPos && !IsDead)

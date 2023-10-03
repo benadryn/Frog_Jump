@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,6 +9,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private GameObject loadingScreen;
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private Image loadingSlider;
+    [SerializeField] private GameObject successScreen;
     
     private float _target;
     
@@ -66,6 +63,20 @@ public class LevelManager : MonoBehaviour
         if (_target > 0)
         {
             loadingSlider.fillAmount = Mathf.MoveTowards(loadingSlider.fillAmount, _target, 3 * Time.deltaTime);
+        }
+        SuccessMessage();
+    }
+
+    private void SuccessMessage()
+    {
+        switch (GameManager.Instance?.didFinish)
+        {
+            case true:
+                successScreen.SetActive(true);
+                break;
+            case false:
+                successScreen.SetActive(false);
+                break;
         }
     }
 }

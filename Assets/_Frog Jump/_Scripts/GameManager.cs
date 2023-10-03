@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -10,6 +8,11 @@ public class GameManager : MonoBehaviour
     public bool died = false;
     public bool isGrounded;
     public bool didFinish = false;
+
+    private bool _isSfxPlaying = false;
+    private AudioSource _audioSource;
+    [SerializeField] private AudioClip successSfx;
+    
     public static event Action<GameState> OnGameStateChange;
 
     private void Awake()
@@ -27,6 +30,20 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         UpdateGameState(GameState.Alive);
+        _audioSource = GetComponent<AudioSource>();
+    }
+
+    private void Update()
+    {
+        if (didFinish && !_isSfxPlaying)
+        {
+            _audioSource.PlayOneShot(successSfx);
+            _isSfxPlaying = true;
+        }
+        else if(!didFinish)
+        {
+            _isSfxPlaying = false;
+        }
     }
 
     public void UpdateGameState(GameState newState)

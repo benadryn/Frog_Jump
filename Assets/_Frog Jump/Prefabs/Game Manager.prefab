@@ -51,6 +51,7 @@ MonoBehaviour:
   died: 0
   isGrounded: 0
   didFinish: 0
+  successSfx: {fileID: 8300000, guid: 15734d2d2f64a014988ec89f67d3a155, type: 3}
 --- !u!114 &4824263213640723162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,7 +85,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.34
   m_Pitch: 1
   Loop: 0
   Mute: 0
