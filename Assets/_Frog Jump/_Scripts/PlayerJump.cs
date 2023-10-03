@@ -67,12 +67,4 @@ public class PlayerJump : MonoBehaviour
 
         }
     }
-
-    // Set bools for jump animation and hide direction arrow
-    // private void StartJumpSequence(bool isJumping, bool isIdle)
-    // {
-    //     _animator.SetBool("isJumping", isJumping);
-    //     _animator.SetBool("isIdle", isIdle);
-    //     arrow.gameObject.SetActive(isIdle);
-    // }
 }
