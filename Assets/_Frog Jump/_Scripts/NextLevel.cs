@@ -28,9 +28,7 @@ public class NextLevel : MonoBehaviour
             }
             else
             {
-                // TEMPORARY Fix later
-                Debug.Log(_scene.buildIndex + ":::: " + SceneManager.sceneCountInBuildSettings);
-                Debug.Log("triggering");
+                GameManager.Instance?.UpdateGameState(GameManager.GameState.GameEnd);
             }
         }
     }

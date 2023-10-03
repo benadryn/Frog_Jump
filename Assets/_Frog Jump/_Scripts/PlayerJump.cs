@@ -23,7 +23,7 @@ public class PlayerJump : MonoBehaviour
     }
     void Update()
     {
-        if (!GameManager.Instance.didFinish)
+        if (!GameManager.Instance.didFinish && !GameManager.Instance.gameEnd)
         {
             Jump();
         }

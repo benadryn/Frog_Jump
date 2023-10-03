@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public bool died = false;
     public bool isGrounded;
     public bool didFinish = false;
+    public bool gameEnd = false;
 
     private bool _isSfxPlaying = false;
     private AudioSource _audioSource;
@@ -58,6 +59,9 @@ public class GameManager : MonoBehaviour
             case GameState.Dead:
                 died = true;
                 break;
+            case GameState.GameEnd:
+                gameEnd = true;
+                break;
             default:
                 throw new ArgumentOutOfRangeException();
         }
@@ -67,7 +71,8 @@ public class GameManager : MonoBehaviour
     public enum GameState
     {
         Alive,
-        Dead
+        Dead,
+        GameEnd
     }
     
 }

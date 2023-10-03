@@ -36,6 +36,7 @@ public class OnDeath : MonoBehaviour
         {
             IsDead = true;
             transform.position = new Vector3(0, -100, 0);
+            Score.Instance.ReduceScore();
             StartCoroutine(ResetDeath());
         }
     }

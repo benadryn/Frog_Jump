@@ -6,7 +6,7 @@ public class Score : MonoBehaviour
     public static Score Instance;
     
     private static int _score = 0;
-    [SerializeField]private TMP_Text scoreText;
+    [SerializeField]private TMP_Text[] scoreText;
 
     
     private void Awake()
@@ -30,6 +30,21 @@ public class Score : MonoBehaviour
     public void AddScore(int point)
     {
         _score += point;
-        scoreText.text = "Score: " + _score;
+        foreach (var score in scoreText)
+        {
+            score.text = "Score: " + _score;
+            
+        }
+    }
+
+    public void ReduceScore()
+    {
+        if (_score < 1) return;
+        _score--;
+        foreach (var score in scoreText)
+        {
+            score.text = "Score: " + _score;
+            
+        }
     }
 }
