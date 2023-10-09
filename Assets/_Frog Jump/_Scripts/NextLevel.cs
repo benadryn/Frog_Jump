@@ -20,14 +20,13 @@ public class NextLevel : MonoBehaviour
         {
             if (_scene.buildIndex < SceneManager.sceneCountInBuildSettings - 1)
             {
-                int randomParticle = Random.Range(0, endLevel.Length);
-                endLevel[randomParticle].Play();
+                EndLevel();
                 StartCoroutine(nameof(LoadLevel));
-                GameManager.Instance.didFinish = true;
             }
             else
             {
                 GameManager.Instance?.UpdateGameState(GameManager.GameState.GameEnd);
+                EndLevel();
             }
         }
     }
@@ -36,5 +35,12 @@ public class NextLevel : MonoBehaviour
     {
         yield return new WaitForSeconds(secondsNewLevel);
         LevelManager.Instance.LoadLevel(_scene.buildIndex + 1);
+    }
+
+    private void EndLevel()
+    {
+        int randomParticle = Random.Range(0, endLevel.Length);
+        endLevel[randomParticle].Play();
+        GameManager.Instance.didFinish = true;
     }
 }

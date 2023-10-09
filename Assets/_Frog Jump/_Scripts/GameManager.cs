@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     private bool _isSfxPlaying = false;
     private AudioSource _audioSource;
     [SerializeField] private AudioClip successSfx;
+    [SerializeField] private GameObject endScreen;
     
     public static event Action<GameState> OnGameStateChange;
 
@@ -45,6 +46,12 @@ public class GameManager : MonoBehaviour
         {
             _isSfxPlaying = false;
         }
+
+        if (endScreen)
+        {
+            EndMessage();
+            
+        }
     }
 
     public void UpdateGameState(GameState newState)
@@ -74,5 +81,9 @@ public class GameManager : MonoBehaviour
         Dead,
         GameEnd
     }
-    
+
+    private void EndMessage()
+    {
+        endScreen.SetActive(gameEnd);
+    }
 }

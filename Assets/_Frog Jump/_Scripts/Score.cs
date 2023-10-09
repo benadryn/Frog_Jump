@@ -30,21 +30,27 @@ public class Score : MonoBehaviour
     public void AddScore(int point)
     {
         _score += point;
-        foreach (var score in scoreText)
-        {
-            score.text = "Score: " + _score;
-            
-        }
+        ScoreText();
     }
 
     public void ReduceScore()
     {
         if (_score < 1) return;
         _score--;
+        ScoreText();
+    }
+
+    public void ResetScore()
+    {
+        _score = 0;
+        ScoreText();
+    }
+
+    private void ScoreText()
+    {
         foreach (var score in scoreText)
         {
             score.text = "Score: " + _score;
-            
         }
     }
 }

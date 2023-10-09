@@ -565,6 +565,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1462385324650055889, guid: 87976b14ab33f774b8dc16c3cb0ccc13, type: 3}
+      propertyPath: endScreen
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2732244385599254780, guid: 87976b14ab33f774b8dc16c3cb0ccc13, type: 3}
       propertyPath: m_Name
       value: Game Manager
@@ -675,11 +679,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 734a470dc5f8d924f9d8a548f047a2a6, type: 3}
---- !u!1 &1663114949 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2732244385599254780, guid: 87976b14ab33f774b8dc16c3cb0ccc13, type: 3}
-  m_PrefabInstance: {fileID: 1473858601}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1814854832
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -974,22 +973,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 125699693357080266, guid: fe647aaeda5265543b9141170d456eb9, type: 3}
-      propertyPath: m_OverrideSorting
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 869586776334476887, guid: fe647aaeda5265543b9141170d456eb9, type: 3}
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 869586776334476887, guid: fe647aaeda5265543b9141170d456eb9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2187194490401507475, guid: fe647aaeda5265543b9141170d456eb9, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1663114949}
     - target: {fileID: 3093319074029073429, guid: fe647aaeda5265543b9141170d456eb9, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1001,10 +988,6 @@ PrefabInstance:
     - target: {fileID: 5313416177701277501, guid: fe647aaeda5265543b9141170d456eb9, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5964963490651346508, guid: fe647aaeda5265543b9141170d456eb9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8618044451929467897, guid: fe647aaeda5265543b9141170d456eb9, type: 3}
       propertyPath: m_Pivot.x
@@ -1085,14 +1068,6 @@ PrefabInstance:
     - target: {fileID: 8618044451929467897, guid: fe647aaeda5265543b9141170d456eb9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8961321073809414534, guid: fe647aaeda5265543b9141170d456eb9, type: 3}
-      propertyPath: m_BlockingObjects
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8961321073809414534, guid: fe647aaeda5265543b9141170d456eb9, type: 3}
-      propertyPath: m_IgnoreReversedGraphics
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

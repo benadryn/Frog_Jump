@@ -51,7 +51,9 @@ MonoBehaviour:
   died: 0
   isGrounded: 0
   didFinish: 0
+  gameEnd: 0
   successSfx: {fileID: 8300000, guid: 15734d2d2f64a014988ec89f67d3a155, type: 3}
+  endScreen: {fileID: 0}
 --- !u!114 &4824263213640723162
 MonoBehaviour:
   m_ObjectHideFlags: 0
