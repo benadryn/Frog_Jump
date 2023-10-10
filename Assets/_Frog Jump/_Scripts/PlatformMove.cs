@@ -8,7 +8,7 @@ public class PlatformMove : MonoBehaviour
     
     private Rigidbody _rigidbody;
     
-    private float _xRangeMin = -7.0f;
+    [SerializeField]private float _xRangeMin = -7.0f;
 
     private Vector3 _startPos;
     private Vector3 _endPos;

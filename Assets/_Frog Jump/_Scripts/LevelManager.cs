@@ -7,7 +7,7 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance;
     [SerializeField] private GameObject loadingScreen;
-    [SerializeField] private GameObject mainMenu;
+    [SerializeField] public GameObject mainMenu;
     [SerializeField] private Image loadingSlider;
     [SerializeField] private GameObject successScreen;
     
