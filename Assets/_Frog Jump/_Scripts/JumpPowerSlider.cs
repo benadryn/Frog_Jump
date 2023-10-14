@@ -11,6 +11,7 @@ public class JumpPowerSlider : MonoBehaviour
     [SerializeField] private float minPower = 5.0f;
     [SerializeField] private float currentPower;
     [SerializeField] private Slider jumpSlider;
+    [SerializeField] private Image sliderFill;
     [SerializeField] private float jumpSliderMultiplier = 1.2f;
 
     private void Start()
@@ -25,6 +26,7 @@ public class JumpPowerSlider : MonoBehaviour
             if (currentPower <= maxPower)
             {
                 currentPower += Time.deltaTime * jumpSliderMultiplier;
+                sliderFill.color = Color.Lerp(Color.green, Color.red, currentPower / maxPower);
             }
             jumpSlider.value = currentPower;
         }
