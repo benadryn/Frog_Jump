@@ -3,33 +3,38 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class InputHandler : MonoBehaviour
 {
     [SerializeField] private TMP_InputField nameInput;
-    // [SerializeField] private string fileName;
-    [SerializeField] private HighScoreHandler _highScoreHandler;
-
+    [SerializeField] private HighScoreHandler highScoreHandler;
     [SerializeField] private GameObject inputField;
+    private bool _scoreAdded;
 
-    // private List<InputEntry> _entries = new List<InputEntry>();
 
-
-    private void Start()
+    private void Update()
     {
-        // _entries = FileHandler.ReadListFromJSON<InputEntry>(fileName);
+        CheckIfNewHighScore();
+    }
+
+    private void CheckIfNewHighScore()
+    {
+        if (GameManager.Instance.didFinish && !_scoreAdded)
+        {
+            if (highScoreHandler.CheckForHighScore(new HighScoreElement("", Score.Instance.finalScore)))
+            {
+                inputField.SetActive(true);
+            }
+        }
     }
 
     public void AddNameToList()
     {
-    //     _entries.Add(new InputEntry(nameInput.text , Score.Instance.finalScore));
-        
-        // FileHandler.SaveToJSON<InputEntry>(_entries, fileName);
-        
-        _highScoreHandler.AddHighScoreIfPossible(new HighScoreElement(nameInput.text, Score.Instance.finalScore) );
+        highScoreHandler.AddHighScoreIfPossible(new HighScoreElement(nameInput.text, Score.Instance.finalScore) );
         nameInput.text = "";
-        
+        _scoreAdded = true;
         inputField.SetActive(false);
         
     }

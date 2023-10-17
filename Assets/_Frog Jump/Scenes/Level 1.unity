@@ -508,6 +508,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1462385324650055889, guid: 87976b14ab33f774b8dc16c3cb0ccc13, type: 3}
+      propertyPath: endScreen
+      value: 
+      objectReference: {fileID: 2896071550900796908}
     - target: {fileID: 2732244385599254780, guid: 87976b14ab33f774b8dc16c3cb0ccc13, type: 3}
       propertyPath: m_Name
       value: Game Manager
@@ -561,6 +565,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87976b14ab33f774b8dc16c3cb0ccc13, type: 3}
+--- !u!114 &1516029935 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1882213958303377661, guid: fe647aaeda5265543b9141170d456eb9, type: 3}
+  m_PrefabInstance: {fileID: 2896071550900796907}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a24feabccf91229478fcd497dca6bb6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1613451829
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -989,6 +1004,10 @@ PrefabInstance:
       propertyPath: _src
       value: 
       objectReference: {fileID: 892627782}
+    - target: {fileID: 2122534822984419670, guid: df7774d7392676649a260baa41bff9b6, type: 3}
+      propertyPath: point
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5641709350552497183, guid: df7774d7392676649a260baa41bff9b6, type: 3}
       propertyPath: m_Name
       value: Coin
@@ -1068,6 +1087,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313416177701277501, guid: fe647aaeda5265543b9141170d456eb9, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5703453619723181601, guid: fe647aaeda5265543b9141170d456eb9, type: 3}
+      propertyPath: highScoreHandler
+      value: 
+      objectReference: {fileID: 1516029935}
+    - target: {fileID: 8324708855053079763, guid: fe647aaeda5265543b9141170d456eb9, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8618044451929467897, guid: fe647aaeda5265543b9141170d456eb9, type: 3}
@@ -1155,6 +1182,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe647aaeda5265543b9141170d456eb9, type: 3}
+--- !u!1 &2896071550900796908 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3093319074029073429, guid: fe647aaeda5265543b9141170d456eb9, type: 3}
+  m_PrefabInstance: {fileID: 2896071550900796907}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

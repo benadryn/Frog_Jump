@@ -14,16 +14,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Frog Jump/Scenes/Level 1.unity
     guid: 8b218c10e98fad243a3db3ff5683b145
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Frog Jump/Scenes/Level 2.unity
     guid: 709b8916c8ce9b14cb6c6bb337cc65a6
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Frog Jump/Scenes/Level 3.unity
     guid: 98602b9195945df4eb79acd45b4a3694
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Frog Jump/Scenes/Level 4.unity
     guid: c0082ea2722910b4cac1a44c73d30ceb
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Frog Jump/Scenes/Level 5.unity
     guid: 7ff5a711983111c4bb0fdaec2e24265c
   m_configObjects: {}

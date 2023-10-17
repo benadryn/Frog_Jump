@@ -6,7 +6,7 @@ using UnityEngine;
 public class HighScoreHandler : MonoBehaviour
 {
     private List<HighScoreElement> _highScoreList = new List<HighScoreElement>();
-    [SerializeField] private int maxCount = 7;
+    [SerializeField] private int maxCount = 3;
     [SerializeField] private string filename;
     private bool _highScoreLoaded;
 
@@ -38,6 +38,19 @@ public class HighScoreHandler : MonoBehaviour
     private void SaveHighScore()
     {
         FileHandler.SaveToJSON<HighScoreElement>(_highScoreList, filename);
+    }
+
+
+    public bool CheckForHighScore(HighScoreElement element)
+    {
+        for (int i = 0; i < maxCount; i++)
+        {
+            if (i >= _highScoreList.Count || element.score > _highScoreList[i].score)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void AddHighScoreIfPossible(HighScoreElement element)
