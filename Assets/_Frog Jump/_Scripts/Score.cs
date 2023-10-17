@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -6,6 +7,7 @@ public class Score : MonoBehaviour
     public static Score Instance;
     
     private static int _score = 0;
+    public int finalScore;
     [SerializeField]private TMP_Text[] scoreText;
 
     
@@ -25,6 +27,14 @@ public class Score : MonoBehaviour
     {
         AddScore(0);
 
+    }
+
+    private void Update()
+    {
+        if (GameManager.Instance.gameEnd)
+        {
+            finalScore = _score;
+        }
     }
 
     public void AddScore(int point)

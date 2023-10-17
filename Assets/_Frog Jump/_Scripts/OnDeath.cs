@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -17,10 +19,11 @@ public class OnDeath : MonoBehaviour
     [SerializeField] private AudioSource src;
     [SerializeField] private AudioClip splashSfx;
     [SerializeField] private ParticleSystem splashParticle;
-
+    
     private void Awake()
     {
         Instance = this;
+
     }
 
     void FixedUpdate()
@@ -48,5 +51,6 @@ public class OnDeath : MonoBehaviour
         transform.rotation = Quaternion.identity;
         _soundPlaying = false;
     }
+    
     
 }

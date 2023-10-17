@@ -983,6 +983,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe647aaeda5265543b9141170d456eb9, type: 3}
+--- !u!114 &1866977079 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1381403999236908239, guid: fe647aaeda5265543b9141170d456eb9, type: 3}
+  m_PrefabInstance: {fileID: 1866977078}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1997771109 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2739308303073180461, guid: f5623b5c1a0aaae4f9380d8f478e6135, type: 3}
@@ -1012,6 +1023,10 @@ PrefabInstance:
       propertyPath: startPos
       value: 
       objectReference: {fileID: 707182334}
+    - target: {fileID: 6346734534834798940, guid: f5623b5c1a0aaae4f9380d8f478e6135, type: 3}
+      propertyPath: deathText
+      value: 
+      objectReference: {fileID: 1866977079}
     - target: {fileID: 8048631956958765015, guid: f5623b5c1a0aaae4f9380d8f478e6135, type: 3}
       propertyPath: _audioSource
       value: 

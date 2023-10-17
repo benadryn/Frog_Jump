@@ -508,10 +508,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1462385324650055889, guid: 87976b14ab33f774b8dc16c3cb0ccc13, type: 3}
-      propertyPath: endScreen
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2732244385599254780, guid: 87976b14ab33f774b8dc16c3cb0ccc13, type: 3}
       propertyPath: m_Name
       value: Game Manager
@@ -824,6 +820,10 @@ PrefabInstance:
       propertyPath: startPos
       value: 
       objectReference: {fileID: 716755742}
+    - target: {fileID: 6346734534834798940, guid: f5623b5c1a0aaae4f9380d8f478e6135, type: 3}
+      propertyPath: deathText
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8048631956958765015, guid: f5623b5c1a0aaae4f9380d8f478e6135, type: 3}
       propertyPath: _audioSource
       value: 
@@ -985,18 +985,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1722951591062361881, guid: df7774d7392676649a260baa41bff9b6, type: 3}
-      propertyPath: m_Radius
-      value: 1.0536449
-      objectReference: {fileID: 0}
-    - target: {fileID: 1722951591062361881, guid: df7774d7392676649a260baa41bff9b6, type: 3}
-      propertyPath: m_Center.x
-      value: -0.03124404
-      objectReference: {fileID: 0}
-    - target: {fileID: 1722951591062361881, guid: df7774d7392676649a260baa41bff9b6, type: 3}
-      propertyPath: m_Center.y
-      value: -0.038312435
-      objectReference: {fileID: 0}
     - target: {fileID: 2122534822984419670, guid: df7774d7392676649a260baa41bff9b6, type: 3}
       propertyPath: _src
       value: 

@@ -5,7 +5,7 @@ public class RestartBtn : MonoBehaviour
 {
     public void RestartGame(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadSceneAsync(sceneName);
         Score.Instance?.ResetScore();
     }
 }

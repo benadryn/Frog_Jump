@@ -829,6 +829,10 @@ PrefabInstance:
       propertyPath: startPos
       value: 
       objectReference: {fileID: 716755742}
+    - target: {fileID: 6346734534834798940, guid: f5623b5c1a0aaae4f9380d8f478e6135, type: 3}
+      propertyPath: deathText
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8048631956958765015, guid: f5623b5c1a0aaae4f9380d8f478e6135, type: 3}
       propertyPath: _audioSource
       value: 
@@ -1129,7 +1133,19 @@ PrefabInstance:
       value: Overlay
       objectReference: {fileID: 0}
     - target: {fileID: 3877656919671019706, guid: fe647aaeda5265543b9141170d456eb9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877656919671019706, guid: fe647aaeda5265543b9141170d456eb9, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877656919671019706, guid: fe647aaeda5265543b9141170d456eb9, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313416177701277501, guid: fe647aaeda5265543b9141170d456eb9, type: 3}
+      propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5313416177701277501, guid: fe647aaeda5265543b9141170d456eb9, type: 3}
