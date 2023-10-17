@@ -289,7 +289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameInput: {fileID: 4406216829533330720}
-  _highScoreHandler: {fileID: 1882213958303377661}
+  highScoreHandler: {fileID: 1882213958303377661}
   inputField: {fileID: 8324708855053079763}
 --- !u!114 &1882213958303377661
 MonoBehaviour:

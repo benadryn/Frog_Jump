@@ -21,7 +21,7 @@ public class InputHandler : MonoBehaviour
 
     private void CheckIfNewHighScore()
     {
-        if (GameManager.Instance.didFinish && !_scoreAdded)
+        if (GameManager.Instance.gameEnd && !_scoreAdded)
         {
             if (highScoreHandler.CheckForHighScore(new HighScoreElement("", Score.Instance.finalScore)))
             {
